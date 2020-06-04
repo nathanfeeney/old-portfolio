@@ -5,17 +5,24 @@
 	color:#f7f7f7;
 	font-family: sans-serif;
 }
+
 .container{
 	background-color: #242423;
 	max-width: 100%;
+
 	
+}
+.header{
+	background: #242423;
+
+	border-bottom: 3px solid #BF4E30;
 }
 #welcome{
 	text-align: center;
 	margin:5% 0;
 }
 header{
-	background-color: #242423;
+	background-color: 
 	color:#E5EAFA;
 	text-align: center;
 	font-size: 45px;
@@ -54,7 +61,7 @@ hr{
             /* Question Styling */
 
 #questionTwo, #questionThree, #questionFour{
-	visibility: hidden;
+/*	visibility: hidden;*/
 }
 
 
@@ -65,7 +72,23 @@ hr{
 	font-size: 30px;
 	margin:5% 0;
 }
+.form-group{
+	margin:0 auto;
+}
 input{
-	width:400px;
-	margin: 0 auto;
+	width:100px;
+	text-align: center;
+	margin: 2% auto;
+	float:none;
+}
+
+
+
+.green-glow{
+	border:4px solid #4dcc7d;
+	box-shadow: 0 0 10px #31b43a;
+}
+.red-glow{
+	border:4px solid #fc121b;
+	box-shadow: 0 0 10px #d01115;
 }
