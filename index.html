@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<script type="text/javascript" src="script.js"></script>
+
 
 	<link rel="stylesheet" href="styles/bootstrap.css">
 	<link rel="stylesheet" href="styles/bootstrap.min.css">
@@ -20,130 +20,127 @@
 	<!--- ----------------- -->
 </head>
 <body>
-
+	
 	<div class="container" id="bgFlash">
 		<div class="row header ">
-			<img src="images/game-header.png" alt="geame header" class="img-fluid">
-				<!--<header>Bampot Escape Room</header>-->
-				
-				
+			<img src="images/game-header.png" alt="Bampot Escape Room" class="img-fluid">
+				<!--<header>Bampot Escape Room</header>-->	
+		</div>
+		
+		
+		<div class="row">
+			<div class="col">
+				<h1>
+					<p id="output">
+						<b>0:00:00:00</b>
+					</p>
+				</h1>
+				<div id="controls">
+					<button id="startPause" onclick="startPause();">
+						<b id="start">Start</b>
+					</button>
+
+				</div>
 			</div>
 		</div>
-		
-	<div class="row">
-		<div class="col">
-			<p class="h2">Time Left</p>
-			<p class="h2">00:00</p>
+		<div class="row">
+			<div class="col-md-6 offset-md-3">
+				<article id="welcome">
+				<p>Fusce vitae sapien vitae nulla varius viverra. Cras sit amet dignissim neque. Etiam efficitur felis massa, non ullamcorper mi venenatis tristique. Aliquam posuere elit porttitor accumsan dictum. Pellentesque convallis laoreet laoreet. Vivamus vel vulputate lectus. Aenean felis diam, ultricies sit amet dictum quis, imperdiet imperdiet nisl. In hac habitasse platea dictumst. Phasellus eleifend ligula tellus, sed facilisis magna commodo vitae. Vivamus ut tempor nunc.</p>
+				</article>
+			</div>
 		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-6 offset-md-3">
-			<article id="welcome">
-			<p>Fusce vitae sapien vitae nulla varius viverra. Cras sit amet dignissim neque. Etiam efficitur felis massa, non ullamcorper mi venenatis tristique. Aliquam posuere elit porttitor accumsan dictum. Pellentesque convallis laoreet laoreet. Vivamus vel vulputate lectus. Aenean felis diam, ultricies sit amet dictum quis, imperdiet imperdiet nisl. In hac habitasse platea dictumst. Phasellus eleifend ligula tellus, sed facilisis magna commodo vitae. Vivamus ut tempor nunc.</p>
-			</article>
-		</div>
-	</div>
 	
 <!----------------------------------------------------------->
-	<div class="row room" id="roomOne">
-		<div class="col-md-6 offset-md-3 ">
-			<p class="h3">Room One</p>
-		<hr>
-		</div>
+		<div class="row room" id="roomOne">
+			<div class="col-md-6 offset-md-3 ">
+				<p class="h3">Room One</p>
+			<hr>
+			</div>
 		
-		<div class="col-lg-6 offset-lg-3 center-block"">
-			<ul>
-				<li id="questionOne">
-					<p class="h4 question">1. Complete this riddle to find the answer.</p>
-					<div class="ridleOneVid">
-						<iframe width="100%" height="200px" src="https://www.youtube.com/embed/V1kOX0vYhPI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-					</div>
-					<div class="form-group w-50 center-block"">
-						<form action="" id="q1form" onsubmit="return false;">
+			<div class="col-lg-6 offset-lg-3 center-block"">
+				<ul>
+					<li id="questionOne">
+						<p class="h4 question">1. Complete this riddle to find the answer.</p>
+						<div class="ridleOneVid">
+							<iframe width="100%" height="200px" src="https://www.youtube.com/embed/V1kOX0vYhPI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div>
+						<div class="form-group w-50 center-block"">
+							<form action="" id="q1form" onsubmit="return false;">
+								<input 
+								id="q0Input"
+								type="text" 
+								class="form-control form-control-lg" 
+								placeholder="Enter Answer...">
+
+								<input class="btn btn-primary" type="submit" onclick="checkAnswer();">
+							</form>
+						</div>
+
+					</li>
+					<li id="questionTwo">
+						<p class="h4 question">2. Solve the Following.</p>
+						<p class="questionText">If 9999 = 4, 8888 = 8, 1816 = 6, 1212 = 0, then 1919 = </p>
+						<div class="form-group w-50">
 							<input 
-							id="q0Input"
+							id="q1Input"
 							type="text" 
 							class="form-control form-control-lg" 
 							placeholder="Enter Answer...">
-
 							<input class="btn btn-primary" type="submit" onclick="checkAnswer();">
-						</form>
-					</div>
+						</div>
 
-				</li>
-				<li id="questionTwo">
-					<p class="h4 question">2. Solve the Following.</p>
-					<p class="questionText">If 9999 = 4, 8888 = 8, 1816 = 6, 1212 = 0, then 1919 = </p>
-					<div class="form-group w-50">
-						<input 
-						id="q1Input"
-						type="text" 
-						class="form-control form-control-lg" 
-						placeholder="Enter Answer...">
-						<input class="btn btn-primary" type="submit" onclick="checkAnswer();">
-					</div>
-
-				</li>
-
-			<ul>
-				<p class="h4 question" id="q3Title">3. Name these countries </p>
-				<li id="questionThree" class="emoji-li col-sm">
-					<div class="row">
-  						<div class="col-sm q3Part1"  >
-							<img src="images/emojis1.png" alt="questionThree">
-							<div class="form-group w-50 center-block">
-								<input 
-								id="q2Input"
-								type="text" 
-								class="form-control form-control-lg" 
-								placeholder="Enter Answer..." width="100px;">
-								<input class="btn btn-primary" type="submit" onclick="checkAnswer();">
-							</div>
-							</div>
-				</li>
-				<li id="questionFour" class="emoji-li col-sm">
-  					
-  						<div class="col-sm q3Part1 " >
-  							<img src="images/emojis2.png" alt="questionThree">
-							<div class="form-group w-50">
-								<input 
-								id="q3Input"
-								type="text" 
-								class="form-control form-control-lg" 
-								placeholder="Enter Answer...">
-								<input class="btn btn-primary" type="submit" onclick="checkAnswer();">
-							</div>
-  						</div>
-				</li>
-				<li id="questionFive" class="emoji-li col-sm">
-  					
-						 <div class="col-sm q3Part1" >
-							<img src="images/emojis3.png" alt="questionThree">
-							<div class="form-group w-50">
-								<input 
-								id="q4Input"
-								type="text" 
-								class="form-control form-control-lg" 
-								placeholder="Enter Answer...">
-								<input class="btn btn-primary" type="submit" onclick="checkAnswer(); openRoom();">
-							</div>
-							
-							
-						 </div>
-					</div>
 					</li>
 				</ul>
-
-				<li id="questionFour">
-					<p class="h4 question">4. Emoji problem</p>
-				</li>
-			</ul>
-
-		</div>
-		
-	</div>
-	
-
+				<ul>
+					<p class="h4 question" id="q3Title">3. Name these countries </p>
+					<li id="questionThree" class="emoji-li col-sm">
+						<div class="row">
+	  						<div class="col-sm q3Part1"  >
+								<img src="images/emojis1.png" alt="questionThree">
+								<div class="form-group w-50 center-block">
+									<input 
+									id="q2Input"
+									type="text" 
+									class="form-control form-control-lg" 
+									placeholder="Enter Answer..." width="100px;">
+									<input class="btn btn-primary" type="submit" onclick="checkAnswer();">
+								</div>
+								</div>
+					</li>
+					<li id="questionFour" class="emoji-li col-sm">
+	  					
+	  						<div class="col-sm q3Part1 " >
+	  							<img src="images/emojis2.png" alt="questionThree">
+								<div class="form-group w-50">
+									<input 
+									id="q3Input"
+									type="text" 
+									class="form-control form-control-lg" 
+									placeholder="Enter Answer...">
+									<input class="btn btn-primary" type="submit" onclick="checkAnswer();">
+								</div>
+	  						</div>
+					</li>
+					<li id="questionFive" class="emoji-li col-sm">
+	  					
+							 <div class="col-sm q3Part1" >
+								<img src="images/emojis3.png" alt="questionThree">
+								<div class="form-group w-50">
+									<input 
+									id="q4Input"
+									type="text" 
+									class="form-control form-control-lg" 
+									placeholder="Enter Answer...">
+									<input class="btn btn-primary" type="submit" onclick="checkAnswer(); openRoom();">
+								</div>
+								
+								
+							 </div>
+						</li>
+				</ul>
+				</div>
+					
 <!----------------------------------------------------------->
 
 	<div class="row room" id="roomTwo">
@@ -152,26 +149,26 @@
 		</div>
 		<ul>
 			<li id="questionSix" class="emoji-li col-sm">
-  					
-					 <div class="col-sm q3Part1" >
-						<img src="images/emojis3.png" alt="questionThree">
-							<div class="form-group w-50">
-								<input 
-								id="q5Input"
-								type="text" 
-								class="form-control form-control-lg" 
-								placeholder="Enter Answer...">
-								<input class="btn btn-primary" type="submit" onclick="checkAnswer(); openRoom();">
-							</div>
-							
-							
-					 </div>
+				<div class="col-sm q3Part1" >
+					<img src="images/emojis3.png" alt="questionThree">
+						<div class="form-group w-50">
+							<input 
+							id="q5Input"
+							type="text" 
+							class="form-control form-control-lg" 
+							placeholder="Enter Answer...">
+							<input class="btn btn-primary" type="submit" onclick="checkAnswer(); openRoom();">
+						</div>
 				</div>
 			</li>
+
 		</ul>
-		<div class="col-md-6 offset-md-3">
-			<p>Fusce vitae sapien vitae nulla varius viverra. Cras sit amet dignissim neque. Etiam efficitur felis massa, non ullamcorper mi venenatis tristique. Aliquam posuere elit porttitor accumsan dictum. Pellentesque convallis laoreet laoreet. Vivamus vel vulputate lectus. Aenean felis diam, ultricies sit amet dictum quis, imperdiet imperdiet nisl. In hac habitasse platea dictumst. Phasellus eleifend ligula tellus, sed facilisis magna commodo vitae. Vivamus ut tempor nunc.</p>
-		</div>
+	</div>
+			
+		
+				<div class="col-md-6 offset-md-3">
+					<p>Fusce vitae sapien vitae nulla varius viverra. Cras sit amet dignissim neque. Etiam efficitur felis massa, non ullamcorper mi venenatis tristique. Aliquam posuere elit porttitor accumsan dictum. Pellentesque convallis laoreet laoreet. Vivamus vel vulputate lectus. Aenean felis diam, ultricies sit amet dictum quis, imperdiet imperdiet nisl. In hac habitasse platea dictumst. Phasellus eleifend ligula tellus, sed facilisis magna commodo vitae. Vivamus ut tempor nunc.</p>
+				</div>
 		
 	</div>
 <!----------------------------------------------------------->
@@ -183,13 +180,19 @@
 			<p>Fusce vitae sapien vitae nulla varius viverra. Cras sit amet dignissim neque. Etiam efficitur felis massa, non ullamcorper mi venenatis tristique. Aliquam posuere elit porttitor accumsan dictum. Pellentesque convallis laoreet laoreet. Vivamus vel vulputate lectus. Aenean felis diam, ultricies sit amet dictum quis, imperdiet imperdiet nisl. In hac habitasse platea dictumst. Phasellus eleifend ligula tellus, sed facilisis magna commodo vitae. Vivamus ut tempor nunc.</p>
 		</div>
 	</div>
-	<footer>
+
+<footer>
 	Made By Thomas Nathan Feeney
 </footer>
 </div>
 
 
+
+
+
 <!----------------------------------------------------------->
+
+<script src="js/stopwatch.js"></script>
 <script>
 	var correctAnsCount = 0;
 	i = 0;
@@ -237,8 +240,16 @@
 
 
 
+
+
+	//////// STOP WATCH //////////////////////
+
+
+
+
 	
 </script>
+
 
 </body>
 </html>
