@@ -9,13 +9,20 @@
 .container{
 	background-color: #242423;
 	max-width: 100%;
-
+	
 	
 }
 .header{
 	background: #242423;
 
 	border-bottom: 3px solid #BF4E30;
+}
+.row{
+	background-color: #242423;
+}
+.header img{
+	width:100%;
+	height:250px;
 }
 #welcome{
 	text-align: center;
@@ -29,7 +36,8 @@ header{
 }
 .room{
 	margin:3% 0;
-	text-align: center
+	text-align: center;
+	
 }
 ul{
 	list-style: none;
@@ -60,7 +68,7 @@ hr{
 
             /* Question Styling */
 
-#questionTwo, #questionThree, #questionFour{
+#questionTwo, #questionThree, #q3Title, #questionFour, #questionFive, #roomTwo{
 	visibility: hidden;
 }
 
@@ -82,7 +90,9 @@ input{
 	float:none;
 }
 
-
+.emoji-li{
+	width:33.3%;
+}
 
 .green-glow{
 	border:4px solid #4dcc7d;
