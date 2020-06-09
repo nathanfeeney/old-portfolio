@@ -1,18 +1,18 @@
-	var time = 0;
+	/*var time = 0;
 	var running = 0;
 function startPause(){
 	if(running == 0){
 		running = 1;
-		increment();
-	document.getElementById("start").innerHTML = "Pause";
-	document.getElementById("startPause").style.backgroundColor = "red";	
-	document.getElementById("startPause").style.borderColor = "red";
+		decrement();
+	document.getElementById("start").innerHTML = "Stop";
+	document.getElementById("startPause").style.backgroundColor = "green";	
+	//document.getElementById("startPause").style.borderColor = "green";
 	}
 	else{
 		running = 0;
-	document.getElementById("start").innerHTML = "Resume";	
-	document.getElementById("startPause").style.backgroundColor = "green";	
-	document.getElementById("startPause").style.borderColor = "green";
+	//document.getElementById("start").innerHTML = "Start";	
+	//document.getElementById("startPause").style.backgroundColor = "Green";	
+	//document.getElementById("startPause").style.borderColor = "pink";
 	}
 }
 function reset(){
@@ -21,12 +21,12 @@ function reset(){
 	document.getElementById("start").innerHTML = "Start";
 	document.getElementById("output").innerHTML = "0:00:00:00";
 	document.getElementById("startPause").style.backgroundColor = "green";	
-	document.getElementById("startPause").style.borderColor = "green";
+	//document.getElementById("startPause").style.borderColor = "green";
 }
-function increment(){
+function decrement(){
 	if(running == 1){
 		setTimeout(function(){
-			time++;
+			time--;
 			var mins = Math.floor(time/10/60);
 			var secs = Math.floor(time/10 % 60);
 			var hours = Math.floor(time/10/60/60); 
@@ -41,4 +41,31 @@ function increment(){
 			increment();
 		},100)
 	}
+}*/
+
+
+	function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
 }
+
+ window.onload = function () {
+    var sixtyMinutes = 60 * 60,
+        display = document.querySelector('#time');
+    startTimer(sixtyMinutes, display);
+};
+
+
+

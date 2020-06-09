@@ -1,35 +1,66 @@
+/* Font Imports */
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@600&display=swap');
+
+/*-------------------------------------*/
 *{
 	margin:0;
 	padding:0;
 	
 	color:#f7f7f7;
-	font-family: sans-serif;
+	
 }
 html{
 	background: yellow;
 }
 
 .container{
-	background-color: #242423;
+	background-color:#242423 ;
+	background-image: url('../images/grunge1.png');
+	background-repeat: repeat;
 	height:100%;
 	max-width: 100%;
 	
 	
 }
 article{
-	font-size: 24px;
+	font-size: 35px;
+	font-weight:700;
+	font-family: 'Josefin Slab', serif;
 }
-.header{
-	background: #242423;
 
-	border-bottom: 3px solid #BF4E30;
+.stopwatch{
+	text-align: center;
+	
+	margin:0 auto;
+}
+.stopwatch button{
+	border-radius: 50%;
+	padding:2%;
+	background-color: red;
+	border:2px white solid;
+}
+.stopwatch h1{
+	
 }
 .row{
-	background-color: #242423;
+
+	/*background-color: #242423;*/
 }
+.header{
+	background:#0c0c0c;
+	background-image: url('../images/grunge_head.png');
+	border-bottom: 3px solid #BF4E30;
+}
+
 .header img{
 	width:100%;
 
+}
+.stopwatch p {
+	font-size: 70px;
+	font-weight: 200;
 }
 #welcome{
 	text-align: center;
@@ -75,8 +106,9 @@ hr{
 
             /* Question Styling */
 
-#questionTwo, #questionThree, #q3Title, #questionFour, #questionFive, #roomTwo{
-	visibility: hidden;
+#questionTwo, #questionThree, #q3Title, #questionFour, #questionFive, #roomTwo, #roomThree{
+	/*visibility: hidden;*/
+	display:none;
 }
 
 
@@ -98,7 +130,7 @@ input{
 }
 
 .emoji-li{
-	width:33.3%;
+	
 }
 
 .green-glow{
@@ -113,15 +145,7 @@ input{
 
 
 
-
-
-
-
-
-
-
-
-/* FOOTER */
+/* -------------------FOOTER---------------------- */
 
 footer{
 	background: green;
