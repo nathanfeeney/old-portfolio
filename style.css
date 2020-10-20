@@ -1,27 +1,16 @@
 *{
-	margin:0;
-	padding:0;
 	
-	color:;
 	
-}
-.container{
-	background-color:#242423 ;
-	margin:0;
-	height:100%;
-	overflow: auto;
 	
 	
 }
-body { 
-
-    width: inherit; 
-    min-height: inherit; 
-    margin: 0; 
-    padding: 0;
-
-    width: 100%;
-} 
+html{
+	 margin: 0 !important;
+    padding: 0 !important
+}
+body {    
+   ;
+}
 .header ul {
   list-style-type: none;
   margin: 0;
@@ -32,26 +21,31 @@ body {
 
 .header li {
   float: left;
+ 
 }
 
 .header li a {
   display: block;
   color:#F5742B;
   text-align: center;
-  padding: 16px;
+  padding:0 2%;
   text-decoration: none;
 }
 .header a{
 	
 }
+.title{
+	color:white;
+	font-size: 2em;
+}
 .row{
-
-	padding:2%;
+	margin:0 !important;
+	padding:2% 0;
 	width: 100%;
 	background: #eaeaea;
 }
 .header{
-	padding:2% 0;
+	
 	background-color: #333333;
 }
 .aboutMe h3{
