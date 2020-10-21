@@ -102,7 +102,13 @@ ul{
 	margin-bottom: 3%;
 }
 
-footer{
+.footer{
 	background: #333333;
-
+	color:white;
+}
+.footer a{
+	color:#F5742B;
+}
+.footer a:hover{
+	color:#999;
 }
