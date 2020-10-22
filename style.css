@@ -6,10 +6,11 @@
 }
 html{
 	 margin: 0 !important;
-    padding: 0 !important
+    padding: 0 !important;
+   
 }
 body {    
-   ;
+ 	
 }
 .header ul {
   list-style-type: none;
@@ -40,9 +41,10 @@ body {
 	font-size: 2em;
 }
 .row{
-	margin:0 !important;
+	overflow: inherit;
 	padding:2% 0;
-	width: 100%;
+	
+	margin: 0 !important;
 	background: #eaeaea;
 }
 .header{
