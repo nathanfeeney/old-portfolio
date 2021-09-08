@@ -59,6 +59,10 @@ body {
   background-size: cover;
   height: 60vh;
 }
+.jumboText{
+    background:rgba(255,255,255,0.6);
+   
+}
 .aboutMe h3{
 	font-size: 3vh;
 	color:#333;
