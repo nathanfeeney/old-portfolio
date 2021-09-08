@@ -37,7 +37,7 @@ body {
 	 margin:0 1%;
 }
 .title{
-	color:white;
+	color:black;
 	font-size: 2em;
 }
 .row{
@@ -49,7 +49,7 @@ body {
 }
 .header{
 	
-	background-color: #333333;
+	background-color: #FBFBFB;
 }
 .jumbotron {
   color: white;
